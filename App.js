@@ -39,7 +39,7 @@ const Logout = ( {navigation} ) => {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown : false }}>
+      <Stack.Navigator initialRouteName="Autenticado">
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Autenticado" component={Autenticado} />
       </Stack.Navigator>

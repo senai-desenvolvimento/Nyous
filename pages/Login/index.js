@@ -24,7 +24,7 @@ const Login = ( {navigation} ) => {
             senha : senha
         }
 
-        fetch('http://192.168.3.173:5000/api/Account/login', {
+        fetch('http://192.168.3.55:5000/api/Account/login', {
             method: 'POST',
             headers :{
                 'Content-Type' : 'application/json'
@@ -39,7 +39,7 @@ const Login = ( {navigation} ) => {
                 console.log(data.token);
                 
                 salvar(data.token);
-                navigation.push('Autenticado');
+                navigation.navigate('Autenticado');
             }else{
                 alert('Email ou senha inválidos! :( ');
             }
